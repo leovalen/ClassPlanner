@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Single-page app: every path is served by index.html and handled by Vue Router.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Never let browsers cache the service worker or the HTML shell.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"

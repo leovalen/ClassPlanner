@@ -1,0 +1,103 @@
+{
+  "id": "shala-default",
+  "schemaVersion": 1,
+  "name": "The Shala – Class Planner",
+  "createdAt": "2026-09-16T00:00:00.000Z",
+  "updatedAt": "2026-09-16T00:00:00.000Z",
+  "sections": [
+    {
+      "id": "tema",
+      "title": "Tema / Intensjon",
+      "kind": "text",
+      "width": "full",
+      "page": 1,
+      "prompts": [
+        "Personlig anekdote",
+        "Dikt/quote som inspirasjon",
+        "Yogic limb (Yama/Niyama)",
+        "Chakra",
+        "Årstid/høytid",
+        "Følelser/endre en tilstand"
+      ]
+    },
+    {
+      "id": "utstyr",
+      "title": "Ting jeg/studentene trenger",
+      "kind": "text",
+      "width": "half",
+      "page": 1,
+      "prompts": ["Teppe", "Blokker", "Musikk", "Bok", "Olje, lys etc"]
+    },
+    {
+      "id": "laeringsmaal",
+      "title": "Læringsmål",
+      "kind": "text",
+      "width": "half",
+      "page": 1,
+      "prompts": [
+        "Hvordan kan min klasse linkes opp til yogisk filosofi?",
+        "Hva ønsker jeg de skal oppnå?",
+        "Hvilke asanas evt. peak pose representerer best temaet for denne klassen?"
+      ]
+    },
+    {
+      "id": "aapning",
+      "title": "Åpning / Introduksjon",
+      "kind": "text",
+      "width": "full",
+      "page": 1,
+      "prompts": [
+        "Ønske velkommen og introduser deg selv :)",
+        "AUM/OM Chant og/eller hjerteåpner (noen ord for å sette energien, og guide deltagere til en dypere kontakt med seg selv)",
+        "Pusteøvelse/Pranayama",
+        "Informasjon om hva de kan forvente? Spørre om noen er nye? Har skader? (gjør dette på en mindful måte, og be de f.eks legge en hånd på brystet som svar)"
+      ]
+    },
+    {
+      "id": "oppvarming",
+      "title": "Oppvarming / Solhilsen",
+      "kind": "text",
+      "width": "full",
+      "page": 1,
+      "prompts": [
+        "Oppvarmingsøvelser",
+        "Solhilsen / variasjon av solhilsen",
+        "HUSK å guide pust :)"
+      ]
+    },
+    {
+      "id": "hovedsekvens",
+      "title": "Hovedsekvens / Asanas",
+      "kind": "sequence",
+      "width": "full",
+      "page": 2,
+      "prompts": [],
+      "groups": [
+        { "id": "standing", "title": "Standing / Balancing" },
+        { "id": "peak", "title": "Peak" },
+        { "id": "twists", "title": "Twists" },
+        { "id": "cooldown", "title": "Cool down" }
+      ]
+    },
+    {
+      "id": "savasana",
+      "title": "Savasana",
+      "kind": "text",
+      "width": "full",
+      "page": 2,
+      "prompts": ["Mantra / Musikk", "Meditasjon"]
+    },
+    {
+      "id": "avslutning",
+      "title": "Avslutning av klasse",
+      "kind": "text",
+      "width": "full",
+      "page": 2,
+      "prompts": [
+        "Takke for timen <3",
+        "Informasjon om \"neste gang\"?",
+        "Post-reflection, noen visdomsord?"
+      ]
+    }
+  ]
+}
