@@ -6,7 +6,7 @@ import { CURRENT_SCHEMA_VERSION } from './types'
 export async function exportAll(): Promise<ExportFile> {
   const [plans, templates] = await Promise.all([db.plans.toArray(), db.templates.toArray()])
   return {
-    app: 'shala-class-planner',
+    app: 'bergamot-class-planner',
     exportedAt: new Date().toISOString(),
     schemaVersion: CURRENT_SCHEMA_VERSION,
     templates,
@@ -34,7 +34,7 @@ export interface ImportResult {
 export async function importFromFile(file: File): Promise<ImportResult> {
   const text = await file.text()
   const parsed = JSON.parse(text) as Partial<ExportFile>
-  if (parsed.app !== 'shala-class-planner' || !Array.isArray(parsed.plans) || !Array.isArray(parsed.templates)) {
+  if (parsed.app !== 'bergamot-class-planner' || !Array.isArray(parsed.plans) || !Array.isArray(parsed.templates)) {
     throw new Error('Filen er ikke en gyldig Class Planner-eksport.')
   }
   const plans = parsed.plans.map((p) => migratePlan(p as Plan))

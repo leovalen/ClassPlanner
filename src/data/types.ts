@@ -60,7 +60,7 @@ export interface Backup {
 }
 
 export interface ExportFile {
-  app: 'shala-class-planner'
+  app: 'bergamot-class-planner'
   exportedAt: string
   schemaVersion: number
   templates: Template[]

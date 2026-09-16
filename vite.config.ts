@@ -9,7 +9,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
-        name: 'The Shala Class Planner',
+        name: 'Bergamot Yoga Class Planner',
         short_name: 'Class Planner',
         description: 'Planlegg og organiser yogaklasser',
         lang: 'nb',

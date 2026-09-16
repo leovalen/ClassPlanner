@@ -19,7 +19,7 @@ class PlannerDatabase extends Dexie {
   backups!: Table<Backup, number>
 
   constructor() {
-    super('shala-class-planner')
+    super('bergamot-class-planner')
     this.version(1).stores({
       plans: 'id, templateId, date, updatedAt',
       templates: 'id, updatedAt',

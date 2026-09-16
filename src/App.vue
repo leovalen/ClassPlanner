@@ -8,7 +8,7 @@ const route = useRoute()
     <header v-if="!route.meta.print" class="topbar">
       <RouterLink to="/" class="brand">
         <span class="brand__ring"></span>
-        <span class="brand__name">The Shala</span>
+        <span class="brand__name">Bergamot Yoga</span>
         <span class="brand__sub">Class Planner</span>
       </RouterLink>
       <nav class="topbar__nav">

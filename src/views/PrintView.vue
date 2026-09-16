@@ -30,7 +30,7 @@ function print() {
 }
 
 onMounted(() => {
-  document.title = `${plan.value?.name || 'Class Planner'} – The Shala`
+  document.title = `${plan.value?.name || 'Class Planner'} – Bergamot Yoga`
 })
 </script>
 
@@ -45,7 +45,7 @@ onMounted(() => {
       <div class="sheet__head">
         <div class="brand brand--print">
           <span class="brand__ring"></span>
-          <span class="brand__name">The Shala</span>
+          <span class="brand__name">Bergamot Yoga</span>
         </div>
         <h1>Class Planner</h1>
       </div>
@@ -82,8 +82,8 @@ onMounted(() => {
       <div class="sheet__foot">
         <div class="brand brand--print">
           <span class="brand__ring"></span>
-          <span class="brand__name">The Shala</span>
-          <span class="brand__sub">Yoga &amp; Mindfulness</span>
+          <span class="brand__name">Bergamot Yoga</span>
+          <span class="brand__sub">Yoga</span>
         </div>
       </div>
     </div>

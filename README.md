@@ -1,4 +1,4 @@
-# The Shala – Class Planner
+# Bergamot Yoga – Class Planner
 
 Web app for creating and organising yoga class plans from a fixed template
 (the two-page "Class Planner" spread). Plans are stored locally in the browser
