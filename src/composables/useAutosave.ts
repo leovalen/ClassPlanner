@@ -40,6 +40,14 @@ export function useAutosave<T extends { updatedAt: string }>(
     }
   }
 
+  /** Explicit save: skips the debounce and saves even if nothing changed, so the user gets feedback. */
+  async function saveNow() {
+    clearTimeout(timer)
+    if (!record.value) return
+    status.value = 'dirty'
+    await flush()
+  }
+
   watch(
     record,
     (value) => {
@@ -54,5 +62,5 @@ export function useAutosave<T extends { updatedAt: string }>(
     () => ({ idle: '', dirty: 'Endret…', saving: 'Lagrer…', saved: 'Lagret' })[status.value],
   )
 
-  return { status, statusText, flush }
+  return { status, statusText, flush, saveNow }
 }

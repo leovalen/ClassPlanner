@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { usePlannerStore } from '../stores/planner'
 import { valueKey, type TemplateSection } from '../data/types'
 import SectionHeader from '../components/SectionHeader.vue'
@@ -7,13 +8,19 @@ import { useAutosave } from '../composables/useAutosave'
 
 const props = defineProps<{ id: string }>()
 const store = usePlannerStore()
+const router = useRouter()
 
 const plan = computed(() => store.planById(props.id))
 const template = computed(() => (plan.value ? store.templateById(plan.value.templateId) : undefined))
 const page1 = computed(() => template.value?.sections.filter((s) => s.page === 1) ?? [])
 const page2 = computed(() => template.value?.sections.filter((s) => s.page === 2) ?? [])
 
-const { statusText } = useAutosave(plan, (p) => store.savePlan(p))
+const { statusText, saveNow } = useAutosave(plan, (p) => store.savePlan(p))
+
+async function saveAndBack() {
+  await saveNow()
+  router.push({ name: 'plans' })
+}
 
 function key(section: TemplateSection, groupId?: string) {
   return valueKey(section.id, groupId)
@@ -31,7 +38,11 @@ function autoGrow(event: Event) {
     <div class="toolbar">
       <RouterLink to="/" class="btn btn--ghost">← Planer</RouterLink>
       <span class="status">{{ statusText }}</span>
-      <RouterLink class="btn btn--primary" :to="{ name: 'print', params: { id: plan.id } }">Skriv ut</RouterLink>
+      <div class="toolbar__actions">
+        <RouterLink class="btn" :to="{ name: 'print', params: { id: plan.id } }">Skriv ut</RouterLink>
+        <button class="btn" @click="saveNow">Lagre</button>
+        <button class="btn btn--primary" @click="saveAndBack">Lagre og gå tilbake til oversikten</button>
+      </div>
     </div>
 
     <div class="meta-grid">
