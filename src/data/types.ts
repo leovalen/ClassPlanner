@@ -6,7 +6,7 @@
  *  - New fields get a default in a migration step.
  *  - Bump CURRENT_SCHEMA_VERSION and add a step in migrations.ts for every change.
  */
-export const CURRENT_SCHEMA_VERSION = 1
+export const CURRENT_SCHEMA_VERSION = 2
 
 export type SectionKind = 'text' | 'sequence'
 export type SectionWidth = 'full' | 'half'
@@ -27,6 +27,8 @@ export interface TemplateSection {
   prompts: string[]
   /** Sub-headings for `sequence` sections, e.g. Standing / Peak / Twists. */
   groups?: TemplateGroup[]
+  /** Included in keyword search on the plan list. Added in schema version 2. */
+  searchable?: boolean
 }
 
 export interface Template {

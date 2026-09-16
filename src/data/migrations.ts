@@ -12,8 +12,20 @@ import { CURRENT_SCHEMA_VERSION } from './types'
  */
 type Step = (record: any) => any
 
-const planSteps: Record<number, Step> = {}
-const templateSteps: Record<number, Step> = {}
+const planSteps: Record<number, Step> = {
+  // 1 -> 2: no change to plans.
+  1: (plan) => plan,
+}
+const templateSteps: Record<number, Step> = {
+  // 1 -> 2: sections gain `searchable`; the original learning-goal and opening sections default to on.
+  1: (template) => ({
+    ...template,
+    sections: (template.sections ?? []).map((section: any) => ({
+      ...section,
+      searchable: section.searchable ?? ['laeringsmaal', 'aapning'].includes(section.id),
+    })),
+  }),
+}
 
 export class SchemaTooNewError extends Error {
   readonly found: number

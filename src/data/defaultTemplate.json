@@ -1,6 +1,6 @@
 {
   "id": "bergamot-default",
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "name": "Bergamot Yoga – Class Planner",
   "createdAt": "2026-09-16T00:00:00.000Z",
   "updatedAt": "2026-09-16T00:00:00.000Z",
@@ -18,7 +18,8 @@
         "Chakra",
         "Årstid/høytid",
         "Følelser/endre en tilstand"
-      ]
+      ],
+      "searchable": false
     },
     {
       "id": "utstyr",
@@ -26,7 +27,14 @@
       "kind": "text",
       "width": "half",
       "page": 1,
-      "prompts": ["Teppe", "Blokker", "Musikk", "Bok", "Olje, lys etc"]
+      "prompts": [
+        "Teppe",
+        "Blokker",
+        "Musikk",
+        "Bok",
+        "Olje, lys etc"
+      ],
+      "searchable": false
     },
     {
       "id": "laeringsmaal",
@@ -38,7 +46,8 @@
         "Hvordan kan min klasse linkes opp til yogisk filosofi?",
         "Hva ønsker jeg de skal oppnå?",
         "Hvilke asanas evt. peak pose representerer best temaet for denne klassen?"
-      ]
+      ],
+      "searchable": true
     },
     {
       "id": "aapning",
@@ -51,7 +60,8 @@
         "AUM/OM Chant og/eller hjerteåpner (noen ord for å sette energien, og guide deltagere til en dypere kontakt med seg selv)",
         "Pusteøvelse/Pranayama",
         "Informasjon om hva de kan forvente? Spørre om noen er nye? Har skader? (gjør dette på en mindful måte, og be de f.eks legge en hånd på brystet som svar)"
-      ]
+      ],
+      "searchable": true
     },
     {
       "id": "oppvarming",
@@ -63,7 +73,8 @@
         "Oppvarmingsøvelser",
         "Solhilsen / variasjon av solhilsen",
         "HUSK å guide pust :)"
-      ]
+      ],
+      "searchable": false
     },
     {
       "id": "hovedsekvens",
@@ -73,11 +84,24 @@
       "page": 2,
       "prompts": [],
       "groups": [
-        { "id": "standing", "title": "Standing / Balancing" },
-        { "id": "peak", "title": "Peak" },
-        { "id": "twists", "title": "Twists" },
-        { "id": "cooldown", "title": "Cool down" }
-      ]
+        {
+          "id": "standing",
+          "title": "Standing / Balancing"
+        },
+        {
+          "id": "peak",
+          "title": "Peak"
+        },
+        {
+          "id": "twists",
+          "title": "Twists"
+        },
+        {
+          "id": "cooldown",
+          "title": "Cool down"
+        }
+      ],
+      "searchable": false
     },
     {
       "id": "savasana",
@@ -85,7 +109,11 @@
       "kind": "text",
       "width": "full",
       "page": 2,
-      "prompts": ["Mantra / Musikk", "Meditasjon"]
+      "prompts": [
+        "Mantra / Musikk",
+        "Meditasjon"
+      ],
+      "searchable": false
     },
     {
       "id": "avslutning",
@@ -97,7 +125,8 @@
         "Takke for timen <3",
         "Informasjon om \"neste gang\"?",
         "Post-reflection, noen visdomsord?"
-      ]
+      ],
+      "searchable": false
     }
   ]
 }

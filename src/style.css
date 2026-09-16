@@ -74,6 +74,14 @@ textarea { resize: vertical; min-height: 4.5rem; line-height: 1.5; }
 input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
 
 /* Plan list */
+.filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+.filters__search { flex: 1 1 16rem; }
+.filters__duration { flex: 0 1 12rem; width: auto; }
+input[type="search"] { width: 100%; padding: 0.5rem 0.6rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; -webkit-appearance: none; appearance: none; }
+.plan-card__hit { font-size: 0.85rem; color: var(--ink-soft); }
+.plan-card__hit-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.check { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.85rem; }
+.check input { width: auto; }
 .plan-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
 .plan-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.8rem 1rem; flex-wrap: wrap; }
 .plan-card__main { text-decoration: none; display: flex; flex-direction: column; gap: 0.15rem; flex: 1 1 14rem; }

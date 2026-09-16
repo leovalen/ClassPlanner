@@ -91,6 +91,7 @@ function onKindChange(section: TemplateSection) {
             <option :value="1">Side 1</option>
             <option :value="2">Side 2</option>
           </select>
+          <label class="check"><input v-model="section.searchable" type="checkbox" /> Søkbar</label>
           <button class="btn btn--ghost" title="Flytt opp" @click="move(section, -1)">↑</button>
           <button class="btn btn--ghost" title="Flytt ned" @click="move(section, 1)">↓</button>
           <button class="btn btn--ghost btn--danger" @click="removeSection(section)">Fjern</button>
